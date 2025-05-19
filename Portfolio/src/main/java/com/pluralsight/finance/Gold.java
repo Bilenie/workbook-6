@@ -9,8 +9,4 @@ public class Gold extends FixedAsset{
         this.weight = weight;
     }
 
-    @Override
-    public void getValue() {
-        System.out.println("");
-    }
 }

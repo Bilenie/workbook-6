@@ -12,7 +12,11 @@ public class FixedAsset implements Valuable {
     }
 
     @Override
-    public void getValue(){
-        System.out.println(" getting Value");
+    public double getValue(){
+        return marketValue;
+    }
+
+    public String getName() {
+        return name;
     }
 }

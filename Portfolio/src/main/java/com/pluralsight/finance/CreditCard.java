@@ -13,8 +13,17 @@ public class CreditCard implements Valuable {
 //Custom Method charge(double ), pay (double )
 
     @Override
-    public void getValue() {
+    public double getValue() {
+        return -balance;
         //credit limit and current balance.
         // Remaining balance or available balance.
+    }
+    public void charge(double amount) {
+        balance += amount;
+    }
+    public void pay(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        }
     }
 }

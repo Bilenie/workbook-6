@@ -14,7 +14,18 @@ public class BankAccount implements Valuable{
 
     // Custom Method deposit(double  ), withdraw(double )
     @Override
- public void getValue(){
-     System.out.println("");
- }
+    public double getValue() {
+        return balance;
+    }
+    public void deposit(double amount) {
+        balance += amount; // add money
+    }
+
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount; // take money out
+        }
+    }
+
+
 }
