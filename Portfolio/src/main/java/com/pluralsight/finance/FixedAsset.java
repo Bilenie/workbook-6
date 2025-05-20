@@ -11,7 +11,6 @@ public class FixedAsset implements Valuable {
         this.marketValue = marketValue;
     }
 
-    @Override
     public double getValue(){
         return marketValue;
     }

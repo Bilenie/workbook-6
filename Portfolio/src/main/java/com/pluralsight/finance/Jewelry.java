@@ -8,4 +8,5 @@ public class Jewelry extends FixedAsset {
         super(name, marketValue);
         this.karat = karat;
     }
+    //we don't need to write the method getValue it is automatically inherited
 }
