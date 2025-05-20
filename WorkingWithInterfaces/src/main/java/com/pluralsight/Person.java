@@ -53,7 +53,8 @@ public class Person implements Comparable<Person>{
 
         //Compare last names
         int lastNameCompare = this.getLastName().compareToIgnoreCase(nameOther.getLastName());
-        if (lastNameCompare != 0) { //0 mean equal => -1 mean this(first item) is less => 1 mean this(first item) is more
+        if (lastNameCompare != 0) { //0 mean equal => -1 mean this(first item) is give me the lesser one
+            // => 1 mean this(first item) is more so give me the greater one.
             return lastNameCompare;
         }
 
