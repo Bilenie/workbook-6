@@ -8,11 +8,17 @@ public class House extends FixedAsset {
     private int bedrooms;
 
     //Generate Constructor
-    public House(String name, double marketValue, int yearBuilt, int bedrooms, int squareFeet) {
-        super(name, marketValue);
+    public House( int yearBuilt, int bedrooms, int squareFeet) {
+        super();
         this.yearBuilt = yearBuilt;
         this.bedrooms = bedrooms;
         this.squareFeet = squareFeet;
+        this.setMarketValue(this.getValue()) ;
+    }
+    @Override
+    public double getValue(){
+        //calculate value
+        return 100.; // add a valid calculation later.
     }
 
 }

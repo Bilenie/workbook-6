@@ -1,13 +1,15 @@
-package com.pluralsight.finance;
+package com.pluralsight;
 
-public class Main {
+import com.pluralsight.finance.*;
+
+public class FinanceApplication {
     public static void main(String[] args) {
         Portfolio portfolio = new Portfolio();
 
         // Fixed assets
-        House house = new House("My House", 250000, 2005, 3, 1800);
-        Gold gold = new Gold("Gold Coins", 3000, 10);
-        Jewelry ring = new Jewelry("Wedding Ring", 5000, 24);
+        House house = new House(1996, 7, 5600);
+        Gold gold = new Gold( 30);
+        Jewelry ring = new Jewelry("Wedding Ring", 5000);
 
         // Liquid assets
         BankAccount bank = new BankAccount("My Bank", "123", 8000);

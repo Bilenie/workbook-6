@@ -1,4 +1,6 @@
-package com.pluralsight.finance;
+package com.pluralsight;
+
+import com.pluralsight.finance.*;//*
 
 import java.util.ArrayList;
 
@@ -14,6 +16,7 @@ public class Portfolio {
     public Portfolio() {
         this.valuables = new ArrayList<>();
     }
+
 
     //Custom Method
     // Add item to portfolio list
