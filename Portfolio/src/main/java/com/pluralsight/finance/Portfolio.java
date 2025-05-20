@@ -26,7 +26,7 @@ public class Portfolio {
         }
         return total;
     }
-    // Optional: show each item’s value
+    //  show each item’s value
     public void showValuables() {
         for (Valuable v : valuables) {
             System.out.println("Item value: " + v.getValue());
