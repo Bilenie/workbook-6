@@ -49,12 +49,32 @@ public class Person implements Comparable<Person>{
 //    }
 
     @Override
-    public int compareTo(Person name) {
-        return this.getLastName().compareToIgnoreCase(name.getLastName());//organize object in the list in alphabetical order of the lastname
-        //so if the last name of object one in the list come before the other it will be printed first.
+    public int compareTo(Person nameOther) {
+
+        //Compare last names
+        int lastNameCompare = this.getLastName().compareToIgnoreCase(nameOther.getLastName());
+        if (lastNameCompare != 0) { //0 mean equal => -1 mean this(first item) is less => 1 mean this(first item) is more
+            return lastNameCompare;
+        }
+
+        //  If last names same, compare first names
+        int firstNameCompare = this.getFirstName().compareToIgnoreCase(nameOther.getFirstName());
+        if (firstNameCompare != 0) {
+            return firstNameCompare;
+        }
+
+        // If first + last names same, compare age/bonus
+        return Integer.compare(this.getAge(), nameOther.getAge());
     }
     @Override
     public String toString() {
         return  this.lastName;
     }
 }
+
+//        if(this.getLastName().equalsIgnoreCase(nameOther.getFirstName())){
+//            return this.getFirstName().compareToIgnoreCase(nameOther.getFirstName());
+//        }else{
+//            return this.getLastName().compareToIgnoreCase(nameOther.getLastName());//organize object in the list in alphabetical order of the lastname
+//            //so if the last name of object one in the list come before the other it will be printed first.
+//        }
