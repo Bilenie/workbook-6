@@ -17,9 +17,11 @@ public class Main {
         myFamily.add(new Person("Asteway","Nigussie", 100));
 
         Collections.sort(myFamily);// compare by string
+        System.out.println(myFamily);
 
         for(Person i : myFamily){
             System.out.println(i.getFirstName() + " - " + i.getLastName() + " - " + i.getAge());
+
         }
 
     }

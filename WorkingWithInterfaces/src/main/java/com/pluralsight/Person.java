@@ -53,4 +53,8 @@ public class Person implements Comparable<Person>{
         return this.getLastName().compareToIgnoreCase(name.getLastName());//organize object in the list in alphabetical order of the lastname
         //so if the last name of object one in the list come before the other it will be printed first.
     }
+    @Override
+    public String toString() {
+        return  this.lastName;
+    }
 }
