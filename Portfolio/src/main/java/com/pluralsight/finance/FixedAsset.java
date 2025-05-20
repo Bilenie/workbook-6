@@ -20,8 +20,10 @@ public abstract class FixedAsset implements Valuable {
     }
 
     //Implemented the getValue method passed from interface
-
-//    public abstract double getValue();// doesn't necessary defined
+@Override // it is safty thing for the compiler / best practice
+  public double getValue(){
+        return marketValue;
+  }// doesn't necessary defined or to be implemented its default behaviour inherited=> subclass don't need to implement it.
 
     //Generate getter
     public String getName() {
