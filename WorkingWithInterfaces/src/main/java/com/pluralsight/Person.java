@@ -50,8 +50,7 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person name) {
-        return this.getLastName().compareToIgnoreCase(name.getLastName());//orgnize object in the list in alphabetical order of the lastname
-        //so if the last name of object one in the list come befor the other it will be printed first.
-
+        return this.getLastName().compareToIgnoreCase(name.getLastName());//organize object in the list in alphabetical order of the lastname
+        //so if the last name of object one in the list come before the other it will be printed first.
     }
 }
