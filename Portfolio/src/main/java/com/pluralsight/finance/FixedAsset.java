@@ -1,17 +1,18 @@
 package com.pluralsight.finance;
 
 public class FixedAsset implements Valuable {
-//Create an attribute/Properties
+    //Create an attribute/Properties
     private String name;
     private double marketValue;
 
-//Generate Constructor
+    //Generate Constructor
     public FixedAsset(String name, double marketValue) {
         this.name = name;
         this.marketValue = marketValue;
     }
 
-    public double getValue(){
+    //Generate getter and setter
+    public double getValue() {
         return marketValue;
     }
 

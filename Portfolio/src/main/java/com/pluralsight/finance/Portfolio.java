@@ -29,6 +29,7 @@ public class Portfolio {
         }
         return total;
     }
+
     // Method to show/display  each item’s value
     public void showValuables() {
         for (Valuable v : valuables) {

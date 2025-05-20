@@ -18,9 +18,11 @@ public class CreditCard implements Valuable {
         //credit limit and current balance.
         // Remaining balance or available balance.
     }
+
     public void charge(double amount) {
         balance += amount;
     }
+
     public void pay(double amount) {
         if (balance >= amount) {
             balance -= amount;
