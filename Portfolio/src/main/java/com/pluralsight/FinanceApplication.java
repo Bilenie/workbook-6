@@ -30,6 +30,13 @@ public class FinanceApplication {
         // Total Net Worth
         System.out.println("Total Portfolio Value: $" + portfolio.getValue());
 
+        //get the least and most values
+
+        Valuable least = portfolio.getLeastValuables();
+        Valuable most = portfolio.getMostValuables();
+
+        System.out.println("Most valuable assets are : " + most.getClass().getSimpleName()+ " " + most.getValue() );
+        System.out.println("Least valuable assets are : " + least.getClass().getSimpleName()+ " " + least.getValue() );
         //Prompt user to add a new asset to the portfolio.
         Scanner myScanner = new Scanner(System.in);
 

@@ -81,6 +81,11 @@ public class Portfolio implements Valuable{
         }
         return least;
     }
+
+    @Override
+    public String toString() {
+        return "Amount $: " + valuables;
+    }
     //this built in method that Griffin showed and AI search.
 // return Collections.max(valuables, Comparator.comparing(Valuable::getValue));
 // return Collections.min(valuables, Comparator.comparing(Valuable::getValue));
