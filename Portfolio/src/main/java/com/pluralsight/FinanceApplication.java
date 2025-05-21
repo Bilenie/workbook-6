@@ -26,6 +26,6 @@ public class FinanceApplication {
         portfolio.showValuables();
 
         // Total Net Worth
-        System.out.println("Total Portfolio Value: $" + portfolio.getTotalValue());
+        System.out.println("Total Portfolio Value: $" + portfolio.getValue());
     }
 }
