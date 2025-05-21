@@ -9,17 +9,21 @@ public class Portfolio implements Valuable{
     //Create
     // List of valuables (house, gold, credit card, etc.)
 
-    //Set property of our Portfolio class it's a List.
+    //Set property of our Portfolio class it's a List. It makes sure every asset it holds implement the interface.
+    // Guarantee that my items on my list valuables implement the interface that is why we declare the type to be interface.
+    //Help me to access getValue() directly without calling the class that implement it.
+
     private ArrayList<Valuable> valuables;
 
     //Generate constructor
     public Portfolio() {
-        this.valuables = new ArrayList<>();
+        this.valuables = new ArrayList<>();//initializing the list to be new list.
     }
 
 
     //Custom Method
     // Add item to portfolio list
+
     public void addValuable(Valuable item) {
         valuables.add(item);
     }
@@ -27,7 +31,7 @@ public class Portfolio implements Valuable{
     // Calculate total value (bank + house - credit card) => get the net value
     public double getValue() {
         double total = 0;
-        for (Valuable v : valuables) {//foreach item in the list called valuables from the Valuable class store it in v.
+        for (Valuable v : valuables) {//foreach(no need to know the index) item in the list called valuables that implement the Valuable interface class store it in v.
             total += v.getValue();// Then get the value that are in v and collect/Add only them and store it as a total.
         }
         return total;
@@ -66,8 +70,10 @@ public class Portfolio implements Valuable{
         if(valuables.isEmpty()){
             return null;
         }
+        //from my list first get the first value of the first item  to start the comparison and store it in box called least.
         Valuable least = valuables.get(0);
 
+        //Then loop through the list to compare it with our least box to line the item in order
         for (Valuable v : valuables) {
             if(v.compareTo(least) < 0){
                  least = v;
@@ -75,5 +81,7 @@ public class Portfolio implements Valuable{
         }
         return least;
     }
-
+    //this built in method that Griffin showed and AI search.
+// return Collections.max(valuables, Comparator.comparing(Valuable::getValue));
+// return Collections.min(valuables, Comparator.comparing(Valuable::getValue));
 }
