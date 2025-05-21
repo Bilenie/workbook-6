@@ -52,11 +52,21 @@ public class Program {
             total += p.getAge();
 
         }
-        double average = total/ myFriends.size();
-        System.out.println(" The average is : " +  average);
-    }
+        double average = total / myFriends.size();
+        System.out.println(" The average is : " + average);
+
+        Person oldest = Person.getHighesAge(myFriends);
+        Person youngest = Person.getLowestAge(myFriends);
+
+        System.out.println("The age of Oldest Person is => " + oldest.getAge());
+        System.out.println("The age of Youngest Person is => " + youngest.getAge());
+
+
 
     }
+
+
+}
 
 
 
